@@ -1,8 +1,0 @@
-callback([
-
-  {
-    "text": "重新开博",
-    "href": "http://localhost:4000/other/start-all-over-again"
-  } 
-
-])
