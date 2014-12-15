@@ -70,6 +70,12 @@ tags: [Hossain, Mohd, Faysal, electrical, engineering, blog, university, pennsyl
 	                        Share this Status
 	                    </p>
 	                    <ul class="social-mini text-center">
+		                    <li>
+					            <a href="http://service.weibo.com/share/share.php?url={{ site.url }}{{ post.url }}&title={{ post.excerpt | strip_html }}%20via%20&#64;披麻皴Nori"
+					            onclick="window.open(this.href, 'weibo-share', 'width=550,height=235');return false;" data-toggle="tooltip" title="Share on Weibo">
+					                <i class="icon-weibo"></i>
+					            </a>
+					        </li>
 	                        <li>
 	                            <a href="https://twitter.com/intent/tweet?text=&quot;{{ post.title }}&quot;%20{{ site.url }}{{ post.url }}%20via%20&#64;{{ site.owner.twitter }}"
 	                            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" data-toggle="tooltip" title="Share on Twitter">
