@@ -10,7 +10,7 @@ imagefeature: about_bg.jpg
   <figcaption></figcaption>
 </figure>
 
-<center>An iOS Designer & Developer.</center>
+<center>Becoming an iOS Designer & Developer from 2009.</center>
 <center></center>
 <center>Then...</center>
 <center>that’s all, thank you.</center>
