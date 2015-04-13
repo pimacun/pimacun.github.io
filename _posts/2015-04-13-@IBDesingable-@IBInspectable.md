@@ -30,12 +30,11 @@ published: true
 
 ## 先说说@IBDesignable和@IBInspectable。
 
-`@IBDesignable`：告诉XCode将指定的类在Interface Builder里进行实时渲染，即在一些属性发生改变，调用重绘方法。
-`@IBInspectable`：声明在Interface Builder中可见且可修改的“动态属性”。
-
+`@IBDesignable`：告诉XCode将指定的类在Interface Builder里进行实时渲染，即在一些属性发生改变，调用重绘方法。<br/>
+`@IBInspectable`：声明在Interface Builder中可见且可修改的“动态属性”。<br/>
 其基本用法如下：
 
-Swift
+- Swift
 {% highlight swift %}
 import UIKit
 
@@ -46,7 +45,7 @@ class MyCustomView: UIView {
 }
 {% endhighlight %}
 
-objective-C
+- objective-C
 {% highlight objective-c %}
 #import <UIKit/UIKit.h>
 
@@ -70,9 +69,9 @@ IB_DESIGNABLE
 
 ### 添加Designable支持和自定义属性
 
- 1. 定义ClockView类。
+ 1.定义ClockView类。
 添加Designable标识，以OC为例，故添加IB_DESIGNABLE<br/>
- 2. 添加Inspectable属性。<br/>
+ 2.添加Inspectable属性。<br/>
 表盘颜色`boardColor`，三个时间指示弧颜色`hourIndicatorColor`、`minuteIndicatorColor`、`secondIndicatorColor`，时间的H、M、S值：`hour`、`minute`，`second`,以及中间logo图`centerImage`。代码如下。
 
 {% highlight objective-c %}
@@ -95,7 +94,7 @@ IB_DESIGNABLE
 @end
 {% endhighlight %}
 
- 3. 此时，打开storyboard文件，拖一个UIView到ViewController里，修改其Class为ClockView。然后切换到属性列表下，会看到刚刚添加的属性，随便填写以下以备后用（时间就好好填写吧，时间关系没空去容错）。如图。<br/>
+ 3.此时，打开storyboard文件，拖一个UIView到ViewController里，修改其Class为ClockView。然后切换到属性列表下，会看到刚刚添加的属性，随便填写以下以备后用（时间就好好填写吧，时间关系没空去容错）。如图。<br/>
 <figure>
     <a href="{{ site.url }}/images/blog/@IBDesingable_@IBInspectable-3.png"><img src="{{ site.url }}/images/blog/@IBDesingable_@IBInspectable-3.png"></a>
 </figure>
@@ -103,14 +102,14 @@ IB_DESIGNABLE
 ### 利用这些属性来布局、重绘
 好了，剩下的就是利用这些属性来布局了，复习下Quartz吧。
 
- 1. 表盘board，直接贝塞尔曲线。
+ 1.表盘board，直接贝塞尔曲线。
 {% highlight objective-c %}
 UIBezierPath* boardPath = [UIBezierPath bezierPathWithOvalInRect: CGRectMake(_center.x - _minB / 2.0, _center.y - _minB / 2.0, _minB, _minB)];
 [_boardColor setFill];
 [boardPath fill];
 {% endhighlight %}
 
- 2. 然后是H，M，S的曲线，定义画弧方法`- (void)drawArcWithRadius:(CGFloat)radius degree:(CGFloat)degree color:(UIColor*)color context:(CGContextRef)context；`<br/>
+ 2.然后是H，M，S的曲线，定义画弧方法`- (void)drawArcWithRadius:(CGFloat)radius degree:(CGFloat)degree color:(UIColor*)color context:(CGContextRef)context；`<br/>
     `radius`:半径<br/>
     `degree`:画弧弧度<br/>
     `color`:画弧颜色<br/>
@@ -153,7 +152,7 @@ UIBezierPath* boardPath = [UIBezierPath bezierPathWithOvalInRect: CGRectMake(_ce
 }
 {% endhighlight %}
 
- 3. 绘制中心的图片logo。
+ 3.绘制中心的图片logo。
 {% highlight objective-c %}
 - (void)drawCenterImageInRect:(CGRect)rect context:(CGContextRef)context {
     CGFloat r = _minB / 2.0 - 25.0 - _borderWidth * 3;
