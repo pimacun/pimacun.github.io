@@ -15,7 +15,7 @@ published: true
 如何用IB_DESIGNABLE(@IBDesingable) & IBInspectable(@IBInspectable)在Xcode 6+中创建可设计的视图控件，以便和设计妹子更好的交流、以及复用。顺带复习下Quartz。
 
 ---
->生活上琐事缠身，加之最近在考虑换工作的事情，已经好久没写blog，一直荒着也不是个事，索兴用午休时间写个Demo。简单说一下如何用XCode 6+来创建可设计的视图控件，顺带复习下Quartz。
+>生活上琐事缠身，已经好久没写blog，一直荒着也不是个事，索兴用午休时间写个Demo。简单说一下如何用XCode 6+来创建可设计的视图控件，顺带复习下Quartz。
 
 ---
 <section>
