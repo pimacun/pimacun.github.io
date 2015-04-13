@@ -171,6 +171,8 @@ UIBezierPath* boardPath = [UIBezierPath bezierPathWithOvalInRect: CGRectMake(_ce
     <a href="{{ site.url }}/images/blog/@IBDesingable_@IBInspectable-all.gif"><img src="{{ site.url }}/images/blog/@IBDesingable_@IBInspectable-all.gif"></a>
 </figure>
 
+## 总结 & Demo下载
+
 由于时间紧迫，没有做详细的设计、动画和容错，有时间大家可以补上。<br/>
 <a href="http://pan.baidu.com/s/1hqzmBpa" target="_blank">![](/images/download.png)</a><br/>
 总之，忽悠设计妹子，So Easy，以此也可以生产一批可复用的控件库，大大提高开发、迭代效率。
