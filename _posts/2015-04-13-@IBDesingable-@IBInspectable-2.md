@@ -4,7 +4,7 @@ title: 如何在Xcode 6+中创建可设计的视图控件（二）
 description: "@IBDesingable & @IBInspectable - 2"
 categories: Foundation
 tags: [design, xcode]
-imagefeature: "/blog/@IBDesingable_@IBInspectable_cover.jpg"
+imagefeature: "/blog/@IBDesingable_@IBInspectable_2_cover.jpg"
 comments: true
 mathjax: null
 featured: true
@@ -12,7 +12,7 @@ published: true
 ---
 
 
-本篇是对上一篇[如何在Xcode 6+中创建可设计的视图控件](http://pimacun.github.io/foundation/@IBDesingable-@IBInspectable/)的补充。摒弃了令人头疼的`drawRect:`，通过`-(void)layoutSubviews`和iOS8+之后引入的`-(void)prepareForInterfaceBuilder`来完成InterfaceBuilder内的重绘和初始化工作。
+本篇是对上一篇[《如何在Xcode 6+中创建可设计的视图控件》](http://pimacun.github.io/foundation/@IBDesingable-@IBInspectable/)的补充。摒弃了令人头疼的`drawRect:`，通过`-(void)layoutSubviews`和iOS8+之后引入的`-(void)prepareForInterfaceBuilder`来完成InterfaceBuilder内的重绘和初始化工作。
 
 ---
 >首先，先说下`-(void)prepareForInterfaceBuilder`，这是iOS8之后Simulator中对NSObject添加的一个方法，主要用来初始化当前类在InterfaceBuilder中内容。然后，为@IBInspectable变量赋值时，通过`-(void)layoutSubviews`方法进行界面重绘和布局。
