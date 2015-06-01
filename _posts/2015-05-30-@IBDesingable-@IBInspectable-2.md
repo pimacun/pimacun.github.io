@@ -184,5 +184,5 @@ IB_DESIGNABLE
 
 ## 总结 & Demo下载
 
-本来想给Label添加个UIFont的@IBInspectable属性，但是失败了不知道怎么加，所以只添加了fontSize属性，有知道的可以私信我，我再修改。<br/>
+另外，回去查了下资料，Inspectable支持的类型包括：`Int`, `Double`, `CGFloat`, `String`, `Bool`, `CGPoint`, `CGSize`, `CGRect`, `UIColor`, `UIImage`。<br/>
 <a href="http://pan.baidu.com/s/1hqIlBTy" target="_blank">![](/images/download.png)</a><br/>
